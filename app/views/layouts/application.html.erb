@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FoodApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%= form_tag "/foods/find" do %>
+    <%= text_field_tag :search_string %>
+    <%= submit_tag "Search" %>
+  <%end %>
+    <%= yield %>
+  </body>
+</html>

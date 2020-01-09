@@ -1,0 +1,20 @@
+<h1>Listing Food</h1>
+<table>
+  <tr>
+    <th>Food</th>
+    <th>Portion</th>
+    <th>Unit of Measure</th>
+    <th>Calories</th>
+    <th>Meal</th>
+  </tr>
+
+  <%@foods.each do|food| %>
+  <tr>
+    <td><%= food.name %></td>
+    <td><%= food.portion %></td>
+    <td><%= food.unit_of_measure %></td>
+    <td><%= food.calories %></td>
+    <td><%= food.meal %></td>
+  </tr>
+  <% end %>
+</table>
